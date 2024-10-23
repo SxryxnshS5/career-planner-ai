@@ -1,0 +1,76 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# Jupyter Notebook files
+.ipynb_checkpoints/
+
+# Flask cache and logs
+instance/
+*.log
+*.pot
+*.pyc
+
+# SQLite database (if used locally)
+*.sqlite3
+*.db
+
+# Environment variables
+.env
+.env.local
+*.env.*
+
+# Firebase credentials
+serviceAccountKey.json
+
+# Static files
+staticfiles/
+static/
+
+# Frontend files (Node.js/npm, if applicable)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor-specific (VSCode, Sublime, etc.)
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# PyCharm project-specific files
+.idea/
+
+# Flask and Python deployment artifacts
+*.pyo
+*.pyd
+*.pdb
+.pytest_cache/
+.coverage
+
+# Firebase hosting cache (optional)
+.firebase/
+
+# MacOS system files
+.DS_Store
+*.swp
+*.swo
