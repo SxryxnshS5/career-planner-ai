@@ -1,6 +1,6 @@
-flask==2.3.3             # Web framework for Python
-Jinja2==3.1.2            # Templating engine (comes with Flask but explicitly listed)
-openai==0.27.8           # OpenAI's API client
+flask==3.0.3             # Web framework for Python
+Jinja2==3.1.4            # Templating engine (comes with Flask but explicitly listed)
+openai==1.52.1         # OpenAI's API client
 PyPDF2==3.0.1            # PDF manipulation library
-python-dotenv==1.0.0     # To load environment variables from a .env file
-gunicorn==21.2.0
+python-dotenv==1.0.1     # To load environment variables from a .env file
+gunicorn==23.0.0
