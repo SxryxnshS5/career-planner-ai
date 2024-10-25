@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Companion - CV Analysis Result</title>
+    <link rel="stylesheet" href="/static/css/profile_assessment.css">
+</head>
+<body>
+    <header class="header">
+        <h1>CV Analysis Result</h1>
+    </header>
+    <main class="container">
+        <section class="analysis-result">
+            <article class="analysis-content">
+                {% if analysis %}
+                    {{ analysis | safe }}
+                {% else %}
+                    <p>Analysis is loading or an error occurred. Please try reloading the page.</p>
+                {% endif %}
+            </article>
+            
+        </section>
+        <nav>
+            <a href="/" class="btn">Go Back</a>
+        </nav>
+    </main>
+    <footer class="footer">
+        <p>© 2024 Career Companion. All rights reserved.</p>
+    </footer>
+</body>
+</html>

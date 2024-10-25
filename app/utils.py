@@ -7,14 +7,13 @@ client = OpenAI(
     api_key=os.environ.get('OPENAI_API_KEY'),
 )
 
-def parse_cv(pdf_path):
+def parse_cv(file):
     cv_text = ""
-    with open(pdf_path, "rb") as file:
-        reader = PyPDF2.PdfReader(file)
-        total_pages = len(reader.pages)
-        for page_number in range(total_pages):
-            page = reader.pages[page_number]
-            cv_text += page.extract_text() + " "
+    reader = PyPDF2.PdfReader(file)
+    total_pages = len(reader.pages)
+    for page_number in range(total_pages):
+        page = reader.pages[page_number]
+        cv_text += page.extract_text() + " "
     return cv_text
 
 def get_analysis(model, messages, temperature, max_tokens):
