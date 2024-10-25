@@ -5,6 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Career Companion - CV Analysis Result</title>
     <link rel="stylesheet" href="/static/css/profile_assessment.css">
+    <script>
+        // Hide loading overlay if it exists on load
+        window.onload = function() {
+            const loadingOverlay = document.getElementById('loading-overlay');
+            if (loadingOverlay) {
+                loadingOverlay.style.display = 'none';
+            }
+        }
+    </script>
 </head>
 <body>
     <header class="header">
@@ -19,7 +28,6 @@
                     <p>Analysis is loading or an error occurred. Please try reloading the page.</p>
                 {% endif %}
             </article>
-            
         </section>
         <nav>
             <a href="/" class="btn">Go Back</a>
