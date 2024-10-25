@@ -1,8 +1,8 @@
 /* General styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212;
+    color: #ffffff;
     margin: 0;
     padding: 0;
 }
@@ -17,9 +17,9 @@ body {
 .header h1 {
     text-align: center;
     font-size: 2em;
-    color: #4a90e2;
+    color: #ffffff;
     margin-top: 20px;
-    border-bottom: 2px solid #e1e8ed;
+    border-bottom: 2px solid #424242;
     padding-bottom: 10px;
 }
 
@@ -27,54 +27,49 @@ body {
 .footer {
     text-align: center;
     padding: 10px 0;
-    background-color: #f1f1f1;
-    color: #666;
+    background-color: #1e1e1e;
+    color: #bdbdbd;
     margin-top: 20px;
 }
 
 /* Analysis section styling */
 .analysis-result {
-    background-color: #fff;
+    background-color: #1e1e1e;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     margin-bottom: 20px;
 }
 
 .analysis-result h2 {
     font-size: 1.75em;
-    color: #4a90e2;
+    color: #ffffff;
     margin-bottom: 15px;
-    border-bottom: 2px solid #e1e8ed;
+    border-bottom: 2px solid #424242;
     padding-bottom: 5px;
 }
 
-.analysis-content h3 {
-    font-size: 1.5em;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 10px;
+.analysis-content h3,
+.strengths h3,
+.weaknesses h3,
+.job-role-alignment h3,
+.actionable-advice h3 {
+    color: #ffffff;
 }
 
-.analysis-content ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-bottom: 15px;
-}
-
-.analysis-content ul li {
-    font-size: 1em;
-    line-height: 1.6;
-    color: #555;
-    margin-bottom: 8px;
+.analysis-content ul li,
+.job-role-alignment p,
+.actionable-advice ul li {
+    color: #ffffff;
+    line-height: 1.5;
 }
 
 /* Button styling */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #4a90e2;
-    color: #fff;
+    background-color: #270b97;
+    color: #ffffff;
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
@@ -83,7 +78,7 @@ body {
 }
 
 .btn:hover {
-    background-color: #357ABD;
+    background-color: #411ecc;
 }
 
 /* Section-specific styling */
@@ -91,7 +86,7 @@ body {
 .weaknesses h3,
 .job-role-alignment h3,
 .actionable-advice h3 {
-    color: #4a90e2;
+    color: #ffffff;
 }
 
 .strengths ul li {
@@ -104,7 +99,7 @@ body {
 
 .job-role-alignment p,
 .actionable-advice ul li {
-    color: #333;
+    color: #ffffff;
     font-size: 1em;
     line-height: 1.5;
 }

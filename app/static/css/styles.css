@@ -1,8 +1,8 @@
 /* General styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
     margin: 0;
     padding: 0;
 }
@@ -11,8 +11,8 @@ body {
     max-width: 800px;
     margin: 0 auto;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background: #1e1e1e; /* Slightly lighter dark for contrast */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
     border-radius: 8px;
 }
 
@@ -20,9 +20,9 @@ body {
 h1 {
     text-align: center;
     font-size: 2em;
-    color: #4a90e2;
+    color: #ffffff; /* Light blue */
     margin-top: 20px;
-    border-bottom: 2px solid #e1e8ed;
+    border-bottom: 2px solid #424242;
     padding-bottom: 10px;
 }
 
@@ -34,7 +34,7 @@ h1 {
 label {
     display: block;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 5px;
 }
 
@@ -44,57 +44,61 @@ button {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 1px solid #424242;
     border-radius: 5px;
+    background-color: #333333;
+    color: #ffffff;
     box-sizing: border-box;
     margin-top: 5px;
 }
 
-input[type="file"]:hover,
-input[type="text"]:hover {
-    border-color: #4a90e2;
+/* Custom styling for file input */
+input[type="file"]::file-selector-button {
+    background-color: #270b97; /* Light blue button */
+    color: #ffffff; /* Dark text for contrast */
+    padding: 10px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
+input[type="file"]::file-selector-button:hover {
+    background-color: #411ecc; /* Darker blue on hover */
+}
+
+/* Button styling */
 button {
-    background-color: #4a90e2;
-    color: #fff;
+    background-color: #270b97;
+    color: #ffffff;
     border: none;
     cursor: pointer;
-    border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #357ABD;
-}
-
-/* Footer styling */
-.footer {
-    text-align: center;
-    padding: 10px 0;
-    background-color: #f1f1f1;
-    color: #666;
-    margin-top: 20px;
+    background-color: #411ecc;
 }
 
 /* Loading overlay styles */
 #loading-overlay {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: #ffffff;
     z-index: 1000;
 }
 
 .loading-spinner {
-    border: 6px solid #f3f3f3;
-    border-top: 6px solid #4a90e2;
+    border: 6px solid #333333;
+    border-top: 6px solid #270b97;
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -109,4 +113,5 @@ button:hover {
 #loading-overlay p {
     margin-top: 10px;
     font-size: 18px;
+    margin-left: 10px;
 }
