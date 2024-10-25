@@ -1,12 +1,6 @@
-from flask import Flask
-from app import routes  # Import routes from app.routes
-
-# Flask app initialization
-app = Flask(__name__)
-
-# Register routes
-app.add_url_rule('/', 'index', routes.index)
-app.add_url_rule('/analyze', 'analyze', routes.analyze, methods=['POST'])
+import os
+from app import app
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    debug_mode = os.getenv("FLASK_DEBUG", "False").lower() == "true"
+    app.run(debug=debug_mode)
