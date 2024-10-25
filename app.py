@@ -1,52 +1,33 @@
 import os
-import PyPDF2
-from openai import OpenAI
 from dotenv import load_dotenv, find_dotenv
-import app.prompts as prompts 
+from app.utils import parse_cv, get_analysis
+from app import prompts
 
-# load the .env file
+# Load the .env file
 _ = load_dotenv(find_dotenv())
-client = OpenAI(
-    api_key = os.environ.get('OPENAI_API_KEY'),
-)
 
+# Configuration
 model = "gpt-4o-mini"
 temperature = 0.3
 max_tokens = 500
 
-# cv
-cv_text = ""
-pdf = "cv.pdf"
-with open(pdf, "rb") as file:
-    reader = PyPDF2.PdfReader(file)
-    total_pages = len(reader.pages)
+# Flask entry point
+def main():
+    pdf = "cv.pdf"
+    cv_text = parse_cv(pdf)
 
-    # Iterate through the range of total_pages
-    for page_number in range(total_pages):
-        page = reader.pages[page_number]
-        cv_text += page.extract_text() + " "
+    # Prompts
+    system_message = prompts.system_message
+    prompt = prompts.generate_prompt(cv_text, "software developer at google")
 
+    messages = [
+        {"role": "system", "content": system_message},
+        {"role": "user", "content": prompt},
+    ]
 
-# prompts
-system_message = prompts.system_message
-prompt = prompts.generate_prompt(cv_text, "software developer at google")
+    # Get analysis
+    analysis = get_analysis(model, messages, temperature, max_tokens)
+    print(analysis)
 
-messages=[
-            {"role": "system", "content": system_message},
-            {
-                "role": "user",
-                "content": prompt
-            }
-        ]
-
-# helper function
-def get_analysis():
-    completion = client.chat.completions.create(
-        model=model,
-        messages=messages,
-        temperature=temperature,
-        max_tokens=max_tokens,
-    )
-    return completion.choices[0].message.content
-
-print(get_analysis())
+if __name__ == "__main__":
+    main()
