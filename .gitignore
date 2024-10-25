@@ -36,10 +36,6 @@ instance/
 # Firebase credentials
 serviceAccountKey.json
 
-# Static files
-staticfiles/
-static/
-
 # Frontend files (Node.js/npm, if applicable)
 node_modules/
 npm-debug.log*

@@ -1,0 +1,110 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header styling */
+.header h1 {
+    text-align: center;
+    font-size: 2em;
+    color: #4a90e2;
+    margin-top: 20px;
+    border-bottom: 2px solid #e1e8ed;
+    padding-bottom: 10px;
+}
+
+/* Footer styling */
+.footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #f1f1f1;
+    color: #666;
+    margin-top: 20px;
+}
+
+/* Analysis section styling */
+.analysis-result {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.analysis-result h2 {
+    font-size: 1.75em;
+    color: #4a90e2;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #e1e8ed;
+    padding-bottom: 5px;
+}
+
+.analysis-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.analysis-content ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.analysis-content ul li {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+/* Button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4a90e2;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #357ABD;
+}
+
+/* Section-specific styling */
+.strengths h3,
+.weaknesses h3,
+.job-role-alignment h3,
+.actionable-advice h3 {
+    color: #4a90e2;
+}
+
+.strengths ul li {
+    color: #2e7d32; /* Green for strengths */
+}
+
+.weaknesses ul li {
+    color: #d32f2f; /* Red for weaknesses */
+}
+
+.job-role-alignment p,
+.actionable-advice ul li {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
