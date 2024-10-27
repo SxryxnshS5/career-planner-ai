@@ -16,6 +16,7 @@ def analyze():
 
     file = request.files['cv-file']
     job_role = request.form.get('job-role', '')
+    language = request.form.get('language')
 
     # Ensure a file has been selected
     if file.filename == '':
@@ -25,8 +26,8 @@ def analyze():
     cv_text = parse_cv(file)
 
     # Prepare prompt and system message
-    system_message = prompts.system_message
-    prompt = prompts.generate_prompt(cv_text, job_role)
+    system_message = prompts.generate_system_message(language)
+    prompt = prompts.generate_prompt(cv_text, job_role, language)
     messages = [
         {"role": "system", "content": system_message},
         {"role": "user", "content": prompt},
