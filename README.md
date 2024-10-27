@@ -15,11 +15,10 @@ Career Planner AI is a Flask-based web application that helps users analyze thei
 - **Database**: Firebase (will be implemented in future)
 - **AI Integration**: OpenAI API (GPT-4o Mini)
 - **File Handling**: PyPDF2 for extracting text from PDFs
+- **Deployment**: Deployed on PythonAnywhere
 
 ## Live Demo
-You can try out the live application here: [Career Planner AI](https://career-planner-ai.onrender.com/). 
-
-**Note**: The site may take some time to load initially as Render spins down the site due to inactivity.
+You can try out the live application here: [Career Planner AI](https://careercompanionai.pythonanywhere.com/). 
 
 ## Installation
 
